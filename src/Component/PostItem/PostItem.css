@@ -1,0 +1,40 @@
+.postItemBlock{
+    width:40vw;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px 10px 10px 10px;
+    border-radius: 5px;
+}
+.authorTime{
+    font-size: 16px;
+    font-style: italic;
+    color:lightslategray;
+    padding-bottom:10px
+}
+.postContent{
+    margin-top:10px
+}
+.postTitle{
+    font-size: 28px;
+    font-weight: bolder;
+}
+.functionalIcon{
+    display: flex;
+}
+.postButton{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding:10px;
+    border-radius: 3px;
+}
+.postButton:hover{
+    background: gainsboro
+}
+.postIcon{
+    margin-right:10px;
+    width:20px;
+    height:20px
+}

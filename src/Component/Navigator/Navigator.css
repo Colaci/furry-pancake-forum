@@ -1,0 +1,52 @@
+.navigator{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+.head_icon{
+    display: flex;
+    align-items: center;
+    margin:15px
+}
+.head_icon .title{
+    margin-left:10px;
+    font-size:30px
+}
+.search_box{
+    width: 40vw;
+    height: 40px;
+    font-size: 20px;
+    color: #3f3212;
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    text-indent: 10px;
+    outline-style: none;
+}
+.button_group{
+    display: flex;
+}
+.naviButton {
+	display: flex;
+	margin-right: 30px;
+	width: 120px;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 50px;
+	border: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 18px;
+}
+.buttonLogin{
+    background-color: tan;
+}
+.buttonSettings{
+    background-color: wheat;
+}
+.naviButton:hover{
+    background-color:burlywood;
+}
