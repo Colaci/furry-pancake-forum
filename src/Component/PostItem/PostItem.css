@@ -1,22 +1,27 @@
 .postItemBlock{
-    width:40vw;
+    width:45vw;
     background-color: white;
     margin-bottom: 20px;
     padding: 20px 10px 10px 10px;
     border-radius: 5px;
+    margin-right:20px;
+    box-shadow: 5px 5px 10px burlywood;
 }
 .authorTime{
     font-size: 16px;
     font-style: italic;
     color:lightslategray;
-    padding-bottom:10px
+    /* padding-bottom:10px */
 }
 .postContent{
-    margin-top:10px
+    /* margin-top:10px */
 }
 .postTitle{
     font-size: 28px;
     font-weight: bolder;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .functionalIcon{
     display: flex;
@@ -37,4 +42,8 @@
     margin-right:10px;
     width:20px;
     height:20px
+}
+.ant-tag{
+    margin-left:10px !important;
+    font-size:15px !important
 }

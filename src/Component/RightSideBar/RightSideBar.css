@@ -1,5 +1,16 @@
 .rightSideBar{
     width: 20vw;
-    background: rgb(196, 47, 47);
-    height:200px
+    background: white;
+    height:200px;
+    border-radius: 5px;
+}
+.rightSideBarHeader{
+    height: 50px;
+    background-color: brown;
+    border-radius: 5px 5px 0px 0px;
+    line-height: 50px;
+    text-indent: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white
 }
