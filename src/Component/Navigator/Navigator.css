@@ -5,16 +5,16 @@
     justify-content: space-between;
     background-color: antiquewhite;
 }
-.head_icon{
+.headIcon{
     display: flex;
     align-items: center;
     margin:15px
 }
-.head_icon .title{
+.headIcon .title{
     margin-left:10px;
     font-size:30px
 }
-.search_box{
+.searchBox{
     width: 40vw;
     height: 40px;
     font-size: 20px;
@@ -26,7 +26,7 @@
     text-indent: 10px;
     outline-style: none;
 }
-.button_group{
+.buttonGroup{
     display: flex;
 }
 .naviButton {

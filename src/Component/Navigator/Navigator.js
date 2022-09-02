@@ -4,12 +4,12 @@ import "./Navigator.css";
 export default function Navigator() {
   return (
     <div className="navigator">
-      <div className="head_icon">
+      <div className="headIcon">
         <img alt="" src="assets/icons/pancake.png" />
         <div className="title">Furry-Pancake-Forum</div>
       </div>
-      <input className="search_box" placeholder="Search...." />
-      <div className="button_group">
+      <input className="searchBox" placeholder="Search...." />
+      <div className="buttonGroup">
         <button className="naviButton buttonLogin">
           <img alt="" src="assets/icons/cookie.png" />
           Login
