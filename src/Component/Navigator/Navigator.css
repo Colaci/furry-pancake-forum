@@ -1,52 +1,63 @@
-.navigator{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: antiquewhite;
+@import url(../../color.css);
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+.navigator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
 }
-.headIcon{
-    display: flex;
-    align-items: center;
-    margin:15px
+.headIcon {
+  display: flex;
+  align-items: center;
+  margin: 15px;
 }
-.headIcon .title{
-    margin-left:10px;
-    font-size:30px
+.headIcon .title {
+  margin-left: 10px;
+  font-size: 20px;
 }
-.searchBox{
-    width: 40vw;
-    height: 40px;
-    font-size: 20px;
-    color: #3f3212;
-    border-radius: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: none;
-    text-indent: 10px;
-    outline-style: none;
+.searchBox {
+  width: 40vw;
+  height: 40px;
+  font-size: 16px;
+  color: #3f3212;
+  border-radius: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  text-indent: 10px;
+  outline-style: none;
+  background-color: var(--grey);
+  font-family: "Orbitron", sans-serif;
 }
-.buttonGroup{
-    display: flex;
+.buttonGroup {
+  display: flex;
 }
 .naviButton {
-	display: flex;
-	margin-right: 30px;
-	width: 120px;
-	align-items: center;
-	justify-content: space-evenly;
-	border-radius: 50px;
-	border: none;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 18px;
+  display: flex;
+  margin-right: 30px;
+  width: 130px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 50px;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
 }
-.buttonLogin{
-    background-color: tan;
+.buttonLogin {
+  background-color: var(--grey);
 }
-.buttonSettings{
-    background-color: wheat;
+.buttonSettings {
+  background-color: var(--grey);
 }
-.naviButton:hover{
-    background-color:burlywood;
+.naviButton:hover {
+  background-color: var(--darker-grey);
+}
+.searchBox:hover {
+  background-color: var(--darker-grey);
+}
+.title {
+  font-family: "Orbitron", sans-serif;
 }

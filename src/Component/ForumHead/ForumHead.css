@@ -1,8 +1,9 @@
-.forumHeadPic{
-    height: 200px;
-    background-color: brown;
+@import url("../../color.css");
+.forumHeadPic {
+  height: 200px;
+  background-color: var(--darker-grey);
 }
-.forumHeadNavi{
-    height:100px;
-    background-color:burlywood
+.forumHeadNavi {
+  height: 100px;
+  background-color: white;
 }

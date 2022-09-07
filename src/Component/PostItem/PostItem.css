@@ -1,49 +1,50 @@
-.postItemBlock{
-    width:45vw;
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 20px 10px 10px 10px;
-    border-radius: 5px;
-    margin-right:20px;
-    box-shadow: 5px 5px 10px burlywood;
+@import url(../../color.css);
+.postItemBlock {
+  width: 500px;
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px var(--cyan);
+  color: var(--black);
 }
-.authorTime{
-    font-size: 16px;
-    font-style: italic;
-    color:lightslategray;
-    /* padding-bottom:10px */
+.authorTime {
+  font-size: 16px;
+  font-style: italic;
+  color: lightslategray;
+  /* padding-bottom:10px */
 }
-.postContent{
-    /* margin-top:10px */
+.postContent {
+  /* margin-top:10px */
 }
-.postTitle{
-    font-size: 28px;
-    font-weight: bolder;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.postTitle {
+  font-size: 28px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.functionalIcon{
-    display: flex;
+.functionalIcon {
+  display: flex;
 }
-.postButton{
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    padding:10px;
-    border-radius: 3px;
+.postButton {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 3px;
 }
-.postButton:hover{
-    background: gainsboro
+.postButton:hover {
+  background: gainsboro;
 }
-.postIcon{
-    margin-right:10px;
-    width:20px;
-    height:20px
+.postIcon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
-.ant-tag{
-    margin-left:10px !important;
-    font-size:15px !important
+.ant-tag {
+  margin-left: 10px !important;
+  font-size: 15px !important;
 }
