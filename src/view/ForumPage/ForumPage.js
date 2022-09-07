@@ -4,6 +4,7 @@ import PostItem from "../../Component/PostItem/PostItem";
 import RightSideBar from "../../Component/RightSideBar/RightSideBar";
 import "./ForumPage.css";
 import React, { useState, useEffect } from "react";
+import { Pagination } from "antd";
 import axios from "axios";
 
 export default function ForumPage() {
@@ -18,7 +19,7 @@ export default function ForumPage() {
 
   return (
     <div>
-      <Navigator />
+      {/* <Navigator /> */}
       <ForumHead />
       <div className="contentWrapper">
         <div className="postItemWrapper">
@@ -27,6 +28,7 @@ export default function ForumPage() {
               <PostItem className="postItem" key={item.filmId} {...item} />
             );
           })}
+          <Pagination defaultCurrent={1} total={50}></Pagination>
         </div>
         <RightSideBar />
       </div>
