@@ -1,6 +1,7 @@
 import React from "react";
 import { Tag } from "antd";
 import "./PostItem.css";
+import { useNavigate } from "react-router-dom";
 // 包含了发帖时间，发帖者，帖子标题，点赞数评论数和收藏键 以及其他
 export default function PostItem(props) {
   var postInfo = {};
@@ -10,8 +11,10 @@ export default function PostItem(props) {
   postInfo.author = props.director;
   postInfo.thumb = props.runtime;
   postInfo.comment = props.filmId;
+  var postId = props.name
+  const navigate = useNavigate()
   return (
-    <div className="postItemBlock">
+    <div onClick={()=>{navigate(`/detail/${postId}`)}} className="postItemBlock">
       <div className="authorTime">
         {postInfo.author} posted in {postInfo.time}
       </div>
@@ -22,11 +25,11 @@ export default function PostItem(props) {
       <div className="postContent">这里应当根据帖子内容由相应的东西</div>
       <div className="functionalIcon">
         <button className="postButton">
-          <img className="postIcon" alt="" src="assets/icons/thumb.png" />
+          <img className="postIcon" alt="" src={require("../../assets/icons/thumb.png")} />
           {postInfo.thumb} thumb up
         </button>
         <button className="postButton">
-          <img className="postIcon" alt="" src="assets/icons/comment.png" />
+          <img className="postIcon" alt="" src={require("../../assets/icons/comment.png")} />
           {postInfo.comment} comments
         </button>
       </div>

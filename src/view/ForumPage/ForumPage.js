@@ -1,4 +1,3 @@
-import Navigator from "../../Component/Navigator/Navigator";
 import ForumHead from "../../Component/ForumHead/ForumHead";
 import PostItem from "../../Component/PostItem/PostItem";
 import RightSideBar from "../../Component/RightSideBar/RightSideBar";
@@ -19,17 +18,20 @@ export default function ForumPage() {
 
   return (
     <div>
-      {/* <Navigator /> */}
       <ForumHead />
       <div className="contentWrapper">
         <div className="postItemWrapper">
+          <input className="newPostBox" placeholder="Create new post.."></input>
+          <div className="postContent">
           {postList.map((item) => {
             return (
               <PostItem className="postItem" key={item.filmId} {...item} />
             );
           })}
-          <Pagination defaultCurrent={1} total={50}></Pagination>
+          </div>
+          <Pagination className="pagination" defaultCurrent={1} total={50}></Pagination>
         </div>
+        {/* <button className="newPostButton">New Post</button> */}
         <RightSideBar />
       </div>
     </div>
