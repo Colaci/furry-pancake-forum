@@ -1,21 +1,22 @@
 import React, { useImperativeHandle, useState } from "react";
-import './LoginForm.css'
+import "./LoginForm.css";
 import { Form, Modal } from "antd";
 
-export default function LoginForm(props) {
+function LoginForm(props) {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
   useImperativeHandle(props.onRef, () => {
     return {
       showLogin: showLogin,
     };
   });
+
   const showLogin = () => {
     setIsLoginVisible(true);
   };
   const handleSubmit = () => {
     setIsLoginVisible(false);
   };
-  const handleCancle = () => {
+  const handleCancel = () => {
     setIsLoginVisible(false);
   };
   return (
@@ -26,7 +27,7 @@ export default function LoginForm(props) {
         title="Furry-Pancke-Forum"
         visible={isLoginVisible}
         onOk={handleSubmit}
-        onCancel={handleCancle}
+        onCancel={handleCancel}
         centered
         wrapClassName={"login"}
       >
@@ -55,3 +56,5 @@ export default function LoginForm(props) {
     </div>
   );
 }
+
+export default LoginForm;

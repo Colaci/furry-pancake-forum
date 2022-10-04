@@ -1,5 +1,6 @@
 @import url(../../color.css);
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+
 .navigator {
   width: 100%;
   display: flex;
@@ -11,6 +12,7 @@
   display: flex;
   align-items: center;
   margin: 15px;
+  cursor: pointer;
 }
 .headIcon .title {
   margin-left: 10px;
@@ -21,7 +23,7 @@
   height: 40px;
   font-size: 16px;
   color: #3f3212;
-  border-radius: 30px;
+  border-radius: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
   border: none;
@@ -32,26 +34,31 @@
 }
 .buttonGroup {
   display: flex;
+  height: 100%;
 }
 .naviButton {
   display: flex;
-  margin-right: 30px;
-  width: 130px;
+  margin-right: 2vw;
+  height: 40px;
+  width: 120px;
   align-items: center;
-  justify-content: space-evenly;
-  border-radius: 50px;
+  justify-content: center;
+  border-radius: 20px;
   border: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  align-items: center;
   font-family: "Orbitron", sans-serif;
   font-size: 16px;
-}
-.buttonLogin {
   background-color: var(--grey);
+  .button-icon {
+    font-size: 26px;
+    margin-right: 10px;
+  }
 }
-.buttonSettings {
-  background-color: var(--grey);
+
+.extend {
+  width: 140px;
 }
+
 .naviButton:hover {
   background-color: var(--darker-grey);
 }

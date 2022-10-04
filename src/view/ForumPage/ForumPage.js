@@ -11,7 +11,6 @@ export default function ForumPage() {
   useEffect(() => {
     // 使用这个电影的数据当一下假数据
     axios.get("test.json").then((res) => {
-      console.log(res.data.data.films);
       setPostList(res.data.data.films);
     });
   }, []);
@@ -23,13 +22,17 @@ export default function ForumPage() {
         <div className="postItemWrapper">
           <input className="newPostBox" placeholder="Create new post.."></input>
           <div className="postContent">
-          {postList.map((item) => {
-            return (
-              <PostItem className="postItem" key={item.filmId} {...item} />
-            );
-          })}
+            {postList.map((item) => {
+              return (
+                <PostItem className="postItem" key={item.filmId} {...item} />
+              );
+            })}
           </div>
-          <Pagination className="pagination" defaultCurrent={1} total={50}></Pagination>
+          <Pagination
+            className="pagination"
+            defaultCurrent={1}
+            total={50}
+          ></Pagination>
         </div>
         {/* <button className="newPostButton">New Post</button> */}
         <RightSideBar />
