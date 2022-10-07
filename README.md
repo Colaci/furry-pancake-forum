@@ -23,7 +23,7 @@ We are not going to divide games based on platforms. But we do intend to host se
 
 ## To-dos
 
-## Basics
+### Basics
 
 - [x] Layout Design
 - [x] Front-End Support
