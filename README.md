@@ -1,7 +1,5 @@
 # Furry Pancake Forum
 
----
-
 ## Introduction
 
 Furry pancake forum is a game information-sharing forum that provides sections of blogs for different types of games.
@@ -14,8 +12,6 @@ Sections would be listed on the main page in a structured way, each of which is 
 
 We are not going to divide games based on platforms. But we do intend to host sections on different platforms as they are a part of the game community.
 
----
-
 # Technical Stack
 
 - React
@@ -25,11 +21,9 @@ We are not going to divide games based on platforms. But we do intend to host se
 - Node.js
 - ...
 
----
-
 # To-dos
 
-## Basics
+#### Basics
 
 - [x] Layout Design
 - [x] Front-End Support
@@ -37,7 +31,7 @@ We are not going to divide games based on platforms. But we do intend to host se
 - [ ] Deployment
 - [ ] ...
 
-## Features
+#### Features
 
 - [ ] HashTags
 - [ ] Chat
@@ -45,8 +39,6 @@ We are not going to divide games based on platforms. But we do intend to host se
 - [ ] Admin-Control
 - [ ] Advanced User Configure
 - [ ] ...
-
----
 
 # Contributors
 
