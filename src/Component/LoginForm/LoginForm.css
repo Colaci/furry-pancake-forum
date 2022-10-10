@@ -1,66 +1,60 @@
-@import '../../color.css';
+@import "../../color.css";
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
-.login .ant-modal-body{
-    height:300px
+.login .ant-modal-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  line-height: 40px;
 }
-.login .ant-modal-content{
-    width: 520px;
+.login .ant-modal-header {
+  border: none;
+  background-color: var(--light-blue);
+  height: 80px;
 }
-.login .ant-modal-title{
-    font-size:30px;
-    text-align: center;
-    font-family: "Orbitron", sans-serif;
-    line-height: 40px;
+.login .ant-modal-footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -20px;
+  border: none;
 }
-.login .ant-modal-header{
-    border: none;
-    background-color: var(--light-blue);
-    height: 80px;
+.login .loginFormHead {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Orbitron", sans-serif;
 }
-.login .ant-modal-footer{
-    display: flex;
-    justify-content: space-around;
-    margin-top:-20px;
-    border: none;
-}
-.login .loginFormHead{
-    text-align: center;
-    font-size: 25px;
-    font-family: "Orbitron", sans-serif;
-}
-.formContent{
-    justify-content: center;
-    height:250px;
-    margin-top:40px
+.formContent {
+  justify-content: center;
+  margin-right:30px;
+  margin-top: 40px;
 }
 
-.login .ant-form-item{
-    display: flex;
-    justify-content: center;
+.login .ant-form-item {
+  display: flex;
+  justify-content: right;
 }
-.login .ant-row{
-    font-size:19px;
-    font-family: "Orbitron", sans-serif;
-    margin-bottom: 15px;
-    height: 40px;
+.login .ant-row {
+  font-size: 19px;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 12px;
+  height: 40px;
 }
-.login .ant-form-item-label > label{
-    font-size:19px !important;
-    font-family: "Orbitron", sans-serif;
+.login .ant-form-item-label > label {
+  font-size: 19px !important;
+  font-family: "Orbitron", sans-serif;
 }
-.login .ant-modal-close-x{
-    line-height: 80px;
+.login .ant-modal-close-x {
+  line-height: 80px;
 }
-.login .ant-btn{
-    border-radius: 40px;
-width: 100px;
-font-size: 20px;
-text-align: center;
-height: 40px;
-line-height: 20px;
-width: 120px;
-margin-bottom: 20px;
-background-color: var(--grey);
-color: var(--black);
-font-family: "Orbitron", sans-serif;
+.login .ant-btn {
+  border-radius: 40px;
+  width: 100px;
+  font-size: 20px;
+  text-align: center;
+  height: 40px;
+  line-height: 20px;
+  width: 120px;
+  margin-bottom: 20px;
+  background-color: var(--grey);
+  color: var(--black);
+  font-family: "Orbitron", sans-serif;
 }
