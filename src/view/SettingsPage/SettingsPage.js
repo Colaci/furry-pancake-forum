@@ -1,21 +1,37 @@
 import { Layout, Menu } from "antd";
 import { Header, Content } from "antd/lib/layout/layout";
-import React, { useState } from "react";
+import React, { useState,useEffect} from "react";
+import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import "./SettingsPage.scss";
+import Account from "../../Component/Account/Account";
+import UserPosts from "../../Component/UserPosts/UserPosts";
 
-const SettingsPage = () => {
+const SettingsPage = (props) => {
+  const [searchParams,setSearchParams]=useSearchParams();
   const [menuItems, setmenuItems] = useState([]);
-  axios.get("basic_layout.json").then((res) => {
-    setmenuItems(res.data.English.settingsNameList);
-  });
+  const [selectKey,setSelectKey] = useState(searchParams.get('key'));
+  axios.defaults.baseURL='http://localhost:3000/'
+  useEffect(()=>{
+    axios.get("basic_layout.json").then((res) => {
+      setmenuItems(res.data.English.settingsNameList);
+    });
+    axios.defaults.baseURL='http://localhost:8080/'
+    axios.get('/api/user/123@qq.com/getUserInfoByEmail').then((res)=>{
+      console.log('让我看看有没有数据',res)
+    })
+  },[])
+  
+  const handleClick=(e)=>{
+    setSelectKey(e.key)
+  }
   return (
     <>
       <Layout>
         <Header>
           <Menu
             mode="horizontal"
-            defaultSelectedKeys={["0"]}
+            defaultSelectedKeys={[selectKey]}
             theme="dark"
             items={menuItems.map((e, idx) => {
               return {
@@ -23,10 +39,14 @@ const SettingsPage = () => {
                 label: menuItems[idx],
               };
             })}
+            onClick={handleClick}
           ></Menu>
         </Header>
         <Content>
-          <div className="content-container"></div>
+          <div className="content-container">
+            {selectKey === '0' && <Account></Account>}
+            {selectKey === '1' && <UserPosts></UserPosts>}
+          </div>
         </Content>
       </Layout>
     </>

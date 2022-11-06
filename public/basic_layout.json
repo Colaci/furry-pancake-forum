@@ -2,13 +2,13 @@
   "English": {
     "settingsNameList": [
       "Account",
-      "Profile",
+      "Posts",
       "Notifications",
       "Emails",
       "Chat"
     ]
   },
   "Chinese": {
-    "settingsNameList": ["账户设置", "头像", "通知", "邮箱", "聊天"]
+    "settingsNameList": ["账户设置", "帖子", "通知", "邮箱", "聊天"]
   }
 }

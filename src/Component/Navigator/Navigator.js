@@ -3,7 +3,7 @@ import LoginForm from "../LoginForm/LoginForm";
 import "./Navigator.scss";
 import { Dropdown, Menu } from "antd";
 import { SettingFilled, LoginOutlined } from "@ant-design/icons";
-
+import Account from "../Account/Account";
 // 导航栏
 
 const Navigator = (props) => {
@@ -13,64 +13,40 @@ const Navigator = (props) => {
   const handleLogin = () => {
     login.current.showLogin();
   };
+  const handleSettings = (e) => {
+    navigate(`/settings/?key=${e.key}`);
+  };
   const settingsMenu = (
     <Menu
+      onClick={handleSettings}
       items={[
         {
+          key: "0",
+          label: "Account",
+        },
+        {
           key: "1",
-          label: (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.antgroup.com"
-            >
-              {/* 可以在这里加图标 */}
-              Account
-            </a>
-          ),
+          label: "Posts",
+          disabled: false,
         },
         {
           key: "2",
-          label: (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.aliyun.com"
-            >
-              Profile
-            </a>
-          ),
+          label: "Notification",
           disabled: false,
         },
         {
           key: "3",
-          label: (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.luohanacademy.com"
-            >
-              Notification
-            </a>
-          ),
-          disabled: false,
-        },
-        {
-          key: "4",
           label: "Email",
         },
         {
-          key: "5",
+          key: "4",
           label: "Chat",
         },
       ]}
     />
   );
-
+  
   const navigate = props.navigate;
-  const handleSettings = () => {
-    navigate("/settings");
-  };
   const handleMain = () => {
     navigate("");
   };
@@ -90,8 +66,8 @@ const Navigator = (props) => {
           <div>Login</div>
         </button>
         {/* 如果当前已经是设置页希望不展示下拉菜单 */}
-        <Dropdown overlay={settingsMenu} placement="bottomRight" arrow>
-          <button className="naviButton extend" onClick={handleSettings}>
+        <Dropdown disabled={window.location.href.indexOf('settings') !== -1} overlay={settingsMenu} placement="bottomRight" arrow>
+          <button className="naviButton extend">
             <SettingFilled className="button-icon" />
             <div>Settings</div>
           </button>

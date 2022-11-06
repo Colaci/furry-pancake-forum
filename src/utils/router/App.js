@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Navigator from "../../Component/Navigator/Navigator";
 import ForumPage from "../../view/ForumPage/ForumPage";
 import DetailPage from "../../view/DetailPage/DetailPage";
 import SettingsPage from "../../view/SettingsPage/SettingsPage";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { BrowserRouter, Routes, Route, useNavigate,Link } from "react-router-dom";
 
 const Root = () => {
   const navigate = useNavigate();
@@ -14,7 +13,8 @@ const Root = () => {
       <Routes>
         <Route path="/" element={<ForumPage />}></Route>
         <Route path="/detail/:postId" element={<DetailPage />}></Route>
-        <Route path="/settings" element={<SettingsPage />}></Route>
+        <Route path='/settings' element={<SettingsPage/>} >
+        </Route>
       </Routes>
     </div>
   );
