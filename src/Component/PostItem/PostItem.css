@@ -27,6 +27,9 @@
   justify-content: flex-start;
   align-items: center;
 }
+.ant-tag{
+  margin-right:2px !important;
+}
 .functionalIcon {
   display: flex;
 }

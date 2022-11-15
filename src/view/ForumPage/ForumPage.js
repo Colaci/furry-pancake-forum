@@ -3,16 +3,16 @@ import PostItem from "../../Component/PostItem/PostItem";
 import RightSideBar from "../../Component/RightSideBar/RightSideBar";
 import "./ForumPage.css";
 import React, { useState, useEffect } from "react";
+import {axios} from '../../utils/request'
 import { Pagination } from "antd";
-import axios from "axios";
 
 export default function ForumPage() {
   const [postList, setPostList] = useState([]);
   useEffect(() => {
-    // 使用这个电影的数据当一下假数据
-    axios.get("test.json").then((res) => {
-      setPostList(res.data.data.films);
-    });
+    axios.post('/api/post/getPostsPageByPage',{length:10,page:1,asc:1}).then((res)=>{
+      console.log('post的数据',res)
+      setPostList(res.data.content)
+    })
   }, []);
 
   return (
@@ -24,14 +24,14 @@ export default function ForumPage() {
           <div className="postContent">
             {postList.map((item) => {
               return (
-                <PostItem className="postItem" key={item.filmId} {...item} />
+                <PostItem className="postItem" key={item.postId} {...item} />
               );
             })}
           </div>
           <Pagination
             className="pagination"
             defaultCurrent={1}
-            total={50}
+            total={postList.length}
           ></Pagination>
         </div>
         {/* <button className="newPostButton">New Post</button> */}

@@ -33,7 +33,7 @@ export default function Account() {
           <div className="rightBox" style={{ height: "30%" }}>
             <div className="rightBoxTitle">用户信息 <span>修改</span></div>
             <div className="rightContentBox">
-              <Form name="userInfo">
+              <Form name="userInfo" className="userForm">
                 <div className="formContent">
                   <Form.Item
                     label="用户名"

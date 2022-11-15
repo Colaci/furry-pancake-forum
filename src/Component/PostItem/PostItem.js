@@ -2,31 +2,31 @@ import React from "react";
 import { Tag } from "antd";
 import "./PostItem.css";
 import { useNavigate } from "react-router-dom";
+import {axios} from '../../utils/request'
 // 包含了发帖时间，发帖者，帖子标题，点赞数评论数和收藏键 以及其他
 export default function PostItem(props) {
-  var postInfo = {};
-  postInfo.category = props.category;
-  postInfo.title = props.name;
-  postInfo.time = props.nation;
-  postInfo.author = props.director;
-  postInfo.thumb = props.runtime;
-  postInfo.comment = props.filmId;
-  var postId = props.name
+  var postInfo = {...props};
+  var postId = props.postId;
   const navigate = useNavigate()
+  const handleLike=(e)=>{
+    e.stopPropagation();
+    console.log('wo dianji ')
+  }
   return (
     <div onClick={()=>{navigate(`/detail/${postId}`)}} className="postItemBlock">
       <div className="authorTime">
-        {postInfo.author} posted in {postInfo.time}
+        {postInfo.userName} posted in {'2018'}
       </div>
       <div className="postTitle">
         {postInfo.title}
-        <Tag color="blue">{postInfo.category}</Tag>
+        {postInfo.label.map((item)=>{return <Tag color="blue" key={item.labelId}>{item.labelName}</Tag>})}
+        
       </div>
-      <div className="postContent">这里应当根据帖子内容由相应的东西</div>
+      <div className="postContent">{postInfo.content.substring(0,postInfo.content.indexOf('\n'))}</div>
       <div className="functionalIcon">
-        <button className="postButton">
+        <button className="postButton" onClick={handleLike}>
           <img className="postIcon" alt="" src={require("../../assets/icons/thumb.png")} />
-          {postInfo.thumb} thumb up
+          {postInfo.like} thumb up
         </button>
         <button className="postButton">
           <img className="postIcon" alt="" src={require("../../assets/icons/comment.png")} />
