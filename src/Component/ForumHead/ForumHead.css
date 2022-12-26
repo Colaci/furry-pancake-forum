@@ -1,9 +1,12 @@
 @import url("../../color.css");
 .forumHeadPic {
-  height: 200px;
-  background-color: var(--darker-grey);
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    /* overflow-y: hidden; */
+    /* background-color: var(--darker-grey); */
 }
 .forumHeadNavi {
-  height: 100px;
-  background-color: white;
+    height: 100px;
+    background-color: white;
 }

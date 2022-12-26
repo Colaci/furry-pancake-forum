@@ -1,22 +1,22 @@
 @import url(../../color.css);
 .rightSideBarWrapper {
-  width: 350px;
-  text-align: left;
-  height: auto;
-  border-radius: 5px;
+    width: 300px;
+    text-align: left;
+    height: auto;
+    border-radius: 5px;
 }
 .rightSideBar {
-  background: white;
+    background: white;
 }
 .rightSideBarHeader {
-  height: 50px;
-  background-color: var(--cyan);
-  border-radius: 5px 5px 0px 0px;
-  line-height: 50px;
-  text-indent: 20px;
-  font-size: 20px;
-  font-weight: bold;
+    height: 50px;
+    background-color: var(--cyan);
+    border-radius: 5px 5px 0px 0px;
+    line-height: 50px;
+    text-indent: 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
 .rightSideBarContent {
-  margin: 10px 10px 0px 10px;
+    margin: 10px 10px 0px 10px;
 }

@@ -1,76 +1,92 @@
 @import url(../../color.css);
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
 
-.navigator {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-}
-.headIcon {
-  display: flex;
-  align-items: center;
-  margin: 15px;
-  cursor: pointer;
-}
-.headIcon .title {
-  margin-left: 10px;
-  font-size: 20px;
-}
-.searchBox {
-  width: 600px;
-  height: 40px;
-  font-size: 16px;
-  color: #3f3212;
-  border-radius: 20px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  text-indent: 10px;
-  outline-style: none;
-  background-color: var(--grey);
-  font-family: "Orbitron", sans-serif;
-}
-.buttonGroup {
-  display: flex;
-  height: 100%;
-}
-.naviButton {
-  display: flex;
-  margin-right: 2vw;
-  height: 40px;
-  width: 120px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  border: none;
-  align-items: center;
-  font-family: "Orbitron", sans-serif;
-  font-size: 16px;
-  background-color: var(--grey);
-  .button-icon {
-    font-size: 26px;
-    margin-right: 10px;
-  }
+.naviFunctionBar {
+    // 在主页面展示 画面最上方的功能区 包括用户信息和搜索
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+
+    .title {
+        font-family: "Orbitron", sans-serif;
+    }
+
+    .headIcon {
+        // 论坛名和论坛头像
+        display: flex;
+        align-items: center;
+        margin: 15px;
+        cursor: pointer;
+        .title {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .searchBox {
+        // 搜索功能区
+        width: 600px;
+        height: 40px;
+        font-size: 16px;
+        color: #3f3212;
+        border-radius: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: none;
+        text-indent: 10px;
+        outline-style: none;
+        background-color: var(--grey);
+        font-family: "Orbitron", sans-serif;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+    .searchBox:hover {
+        background-color: var(--blue-hover);
+    }
+
+    .buttonGroup {
+        display: flex;
+        height: 100%;
+        justify-self: end;
+        .naviButton {
+            display: flex;
+            justify-self: end;
+            margin-right: 2vw;
+            height: 40px;
+            width: 120px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            border-color: var(--grey);
+            align-items: center;
+            font-family: "Orbitron", sans-serif;
+            font-size: 16px;
+            background-color: var(--grey);
+            .button-icon {
+                font-size: 26px;
+                margin-right: 10px;
+            }
+        }
+
+        .extend {
+            width: 140px;
+        }
+
+        .naviButton:hover {
+            background-color: var(--blue-hover);
+        }
+    }
 }
 
-.extend {
-  width: 140px;
+.login-form {
+    display: absolute;
 }
 
-.naviButton:hover {
-  background-color: var(--darker-grey);
-}
-.searchBox:hover {
-  background-color: var(--darker-grey);
-}
-.title {
-  font-family: "Orbitron", sans-serif;
-}
-.ant-dropdown-menu-item{
-  font-size:20px !important;
-  font-family: "Orbitron", sans-serif;
-  margin-top:2px !important;
-  margin-bottom: 2px !important;
+.ant-dropdown-menu-item {
+    font-size: 20px !important;
+    font-family: "Orbitron", sans-serif;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
 }

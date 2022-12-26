@@ -1,11 +1,12 @@
 :root {
-  --darker-grey: #c0ccd4;
-  --grey: #eef0f4;
-  --blue: #204969;
-  --cyan: #00adb5;
-  --black: #222831;
-  --light-blue:#add8e6;
-  --cornflower-blue:#6495ed;
-  --light-cyan:#00acb51e;
-  --dark-grey:#768798
+    --darker-grey: #c0ccd4;
+    --grey: #eef0f4;
+    --blue: #204969;
+    --cyan: #00adb5;
+    --black: #222831;
+    --light-blue: #add8e6;
+    --cornflower-blue: #6495ed;
+    --light-cyan: #00acb51e;
+    --dark-grey: #768798;
+    --blue-hover: rgb(214, 217, 222);
 }
